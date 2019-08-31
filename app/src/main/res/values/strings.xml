@@ -9,8 +9,13 @@
     <string name="registro_numeroTarjeta">Numero</string>
     <string name="registro_ccv">CCV</string>
     <string name="registro_vencimientoTarjeta">MM/AA</string>
+    <string name="registro_tipoCuenta">Tipo de cuenta</string>
+    <string name="registro_cuentaBase">Base</string>
+    <string name="registro_cuentaPremium">Premium</string>
+    <string name="registro_cuentaFull">Full</string>
     <string name="registro_credito">Credito inicial</string>
-    <string name="registro_email">NO ENVIAR NOTIFICACIONES AL MAIL</string>
+    <string name="registro_offEmail">NO ENVIAR NOTIFICACIONES AL MAIL</string>
+    <string name="registro_onEmail">RECIBIR NOTIFICACIONES AL MAIL</string>
     <string name="registro_notificar">Notificar por correo electrónico.</string>
     <string name="registro_vendedor">Es vendedor</string>
     <string name="registro_ctaAlias">Alias CBU</string>
