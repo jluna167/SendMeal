@@ -238,10 +238,11 @@
         android:layout_height="wrap_content"
         android:text="@string/registro_terminosCondiciones" />
 
-    <Button
-        android:id="@+id/btnRegistrar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/registro_registrar" />
+        <Button
+            android:id="@+id/btnRegistrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="registrar"
+            android:text="@string/registro_registrar" />
     </LinearLayout>
 </ScrollView>
