@@ -100,7 +100,7 @@
             android:inputType="number"
             android:maxLength="16"
             android:textColor="@color/text"
-            android:text="@string/registro_numeroTarjeta" />
+            android:hint="@string/registro_numeroTarjeta" />
 
         <EditText
             android:id="@+id/etCcv"
@@ -111,7 +111,7 @@
             android:inputType="number"
             android:maxLength="3"
             android:textColor="@color/text"
-            android:text="@string/registro_ccv" />
+            android:hint="@string/registro_ccv" />
 
         <EditText
             android:id="@+id/etVencimientoTarjeta"
@@ -119,9 +119,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="number"
-            android:textColor="@color/text"
-            android:text="@string/registro_vencimientoTarjeta" />
+            android:inputType="date"
+            android:hint="@string/registro_vencimientoTarjeta"
+            android:textColor="@color/text" />
     </LinearLayout>
 
     <RadioGroup
@@ -205,7 +205,8 @@
             android:layout_height="wrap_content"
             android:textSize="@dimen/etiquetas"
             android:textColor="@color/etiqueta"
-            android:text="@string/registro_ctaAlias" />
+            android:text="@string/registro_ctaAlias"
+            android:visibility="gone"/>
 
         <EditText
             android:id="@+id/etAliasCBU"
@@ -213,7 +214,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="" />
+            android:text=""
+            android:visibility="gone"/>
 
         <TextView
             android:id="@+id/tvCBU"
@@ -221,7 +223,8 @@
             android:layout_height="wrap_content"
             android:textSize="@dimen/etiquetas"
             android:textColor="@color/etiqueta"
-            android:text="@string/registro_ctaCBU" />
+            android:text="@string/registro_ctaCBU"
+            android:visibility="gone"/>
 
         <EditText
             android:id="@+id/etCBU"
@@ -229,7 +232,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="" />
+            android:text=""
+            android:visibility="gone"/>
     </LinearLayout>
 
     <CheckBox
@@ -243,6 +247,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="registrar"
-            android:text="@string/registro_registrar" />
+            android:text="@string/registro_registrar"
+            android:enabled="false"/>
     </LinearLayout>
 </ScrollView>
