@@ -241,6 +241,7 @@ public class MainActivity extends AppCompatActivity {
         this.usuario.setNotificarMail(tbEmail.isChecked());
 
         Toast.makeText(this, "SE GUARDO EL USUARIO CORRECTAMENTE", Toast.LENGTH_LONG).show();
+        
     }
 
     public void validarFormulario(View v) throws Exception {
