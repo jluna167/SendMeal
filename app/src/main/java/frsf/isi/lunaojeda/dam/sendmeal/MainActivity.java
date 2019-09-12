@@ -19,8 +19,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
+import java.util.Calendar;
 import java.util.Date;
-
 import java.util.logging.SimpleFormatter;
 
 import frsf.isi.lunaojeda.dam.sendmeal.domain.CuentaBancaria;
@@ -71,28 +71,6 @@ public class MainActivity extends AppCompatActivity {
         cbTerminosCondiciones = (CheckBox) findViewById(R.id.cbTerminosCondiciones);
         btnRegistrar = findViewById(R.id.btnRegistrar);
 
-        /*etVencimientoTarjeta.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int start, int before, int count) {
-                String[] fecha = charSequence.toString().split("/");
-                int mes = Integer.parseInt(fecha[0]);
-
-                if(){
-                    etVencimientoTarjeta.setText(etVencimientoTarjeta.getText().toString() + '/');
-                }
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-
-            }
-        });*/
         tvNumeroCredito = (TextView) findViewById(R.id.tvNumeroCredito);
         rgCuenta = (RadioGroup) findViewById(R.id.rgCuenta);
 
@@ -224,6 +202,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             this.validarFormulario(v);
         } catch (Exception e) {
+            return;
         }
 
         this.usuario.setNombre(this.etNombre.getText().toString());
@@ -241,7 +220,7 @@ public class MainActivity extends AppCompatActivity {
         this.usuario.setNotificarMail(tbEmail.isChecked());
 
         Toast.makeText(this, "SE GUARDO EL USUARIO CORRECTAMENTE", Toast.LENGTH_LONG).show();
-        
+
     }
 
     public void validarFormulario(View v) throws Exception {
@@ -315,6 +294,29 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Fecha de vencimiento incompleta", Toast.LENGTH_LONG).show();
             return false;
         }
+        else{
+            String[] fecha = etVencimientoTarjeta.getText().toString().split("/");
+            Date hoy = Calendar.getInstance().getTime();
+
+            if(fecha.length!=2) {
+                Toast.makeText(this, "Fecha de vencimiento incorrecta", Toast.LENGTH_LONG).show();
+                return  false;
+            }
+            else{
+                int mes = Integer.parseInt(fecha[0]);
+                int anio = Integer.parseInt(fecha[1]);
+                if(mes>12 || mes <= 0 ) {
+                    Toast.makeText(this, "Fecha de vencimiento incorrecta", Toast.LENGTH_LONG).show();
+                    return  false;
+                }
+                else if (anio < hoy.getYear()){
+                    Toast.makeText(this, "Fecha de vencimiento incorrecta", Toast.LENGTH_LONG).show();
+                    return  false;
+                }
+            }
+
+            }
+
         //else if(etVencimientoTarjeta.getText().toString())
 
 
