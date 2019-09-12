@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">SendMeal</string>
+    <string name="registro_titulo">Registrar Usuario</string>
+    <string name="registro_nombre">Nombre</string>
+    <string name="registro_clave">Clave</string>
+    <string name="registro_clave2">Repetir clave</string>
+    <string name="registro_correo">Correo electrónico</string>
+    <string name="registro_tarjeta">Tarjeta de credito</string>
+    <string name="registro_numeroTarjeta">Numero</string>
+    <string name="registro_ccv">CCV</string>
+    <string name="registro_vencimientoTarjeta">MM/AA</string>
+    <string name="registro_tipoCuenta">Tipo de cuenta</string>
+    <string name="registro_cuentaBase">Base</string>
+    <string name="registro_cuentaPremium">Premium</string>
+    <string name="registro_cuentaFull">Full</string>
+    <string name="registro_credito">Credito inicial</string>
+    <string name="registro_offEmail">NO ENVIAR NOTIFICACIONES AL MAIL</string>
+    <string name="registro_onEmail">RECIBIR NOTIFICACIONES AL MAIL</string>
+    <string name="registro_notificar">Notificar por correo electrónico.</string>
+    <string name="registro_vendedor">Es vendedor</string>
+    <string name="registro_ctaAlias">Alias CBU</string>
+    <string name="registro_ctaCBU">CBU</string>
+    <string name="registro_terminosCondiciones">Acepta terminos y condiciones</string>
+    <string name="registro_registrar">Registrar</string>
 </resources>
+

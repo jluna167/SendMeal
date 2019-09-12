@@ -1,18 +1,269 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/titulo"
+        android:textColor="@color/titulo"
+        android:text="@string/registro_titulo" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/tvNombre"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="@dimen/etiquetas"
+        android:textColor="@color/etiqueta"
+        android:text="@string/registro_nombre" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:id="@+id/etNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType=""
+        android:text="" />
+
+    <TextView
+        android:id="@+id/tvClave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/etiquetas"
+        android:textColor="@color/etiqueta"
+        android:text="@string/registro_clave" />
+
+    <EditText
+        android:id="@+id/etClave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/tvClave2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/etiquetas"
+        android:textColor="@color/etiqueta"
+        android:text="@string/registro_clave2" />
+
+    <EditText
+        android:id="@+id/etClave2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/tvCorreo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/etiquetas"
+        android:textColor="@color/etiqueta"
+        android:text="@string/registro_correo" />
+
+    <EditText
+        android:id="@+id/etCorreo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textEmailAddress" />
+
+    <TextView
+        android:id="@+id/tvTarjeta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/etiquetas"
+        android:textColor="@color/etiqueta"
+        android:text="@string/registro_tarjeta" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/etNumeroTarjeta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="number"
+            android:maxLength="16"
+            android:textColor="@color/text"
+            android:hint="@string/registro_numeroTarjeta" />
+
+        <EditText
+            android:id="@+id/etCcv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="number"
+            android:maxLength="3"
+            android:textColor="@color/text"
+            android:hint="@string/registro_ccv" />
+
+        <EditText
+            android:id="@+id/etVencimientoTarjeta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="date"
+            android:hint="@string/registro_vencimientoTarjeta"
+            android:textColor="@color/text" />
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/rgCuenta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tvTipoCuenta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/etiquetas"
+            android:textColor="@color/etiqueta"
+            android:text="@string/registro_tipoCuenta" />
+
+        <RadioButton
+            android:id="@+id/rbCuentaBase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/registro_cuentaBase" />
+
+        <RadioButton
+            android:id="@+id/rbCuentaPremium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/registro_cuentaPremium" />
+
+        <RadioButton
+            android:id="@+id/rbCuentaFull"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/registro_cuentaFull" />
+
+    </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tvCredito"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/etiquetas"
+                android:textColor="@color/etiqueta"
+                android:text="@string/registro_credito" />
+            <TextView
+                android:id="@+id/tvNumeroCredito"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/etiquetas"
+                android:textColor="@color/etiqueta"
+                android:layout_marginLeft="20dp"
+                android:text=" "/>
+        </LinearLayout>
+
+
+    <SeekBar
+        android:id="@+id/sbCredito"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:min="0"
+        android:max="1500"/>
+
+    <TextView
+        android:id="@+id/tvNotificar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/etiquetas"
+        android:textColor="@color/etiqueta"
+        android:text="@string/registro_notificar" />
+
+    <ToggleButton
+        android:id="@+id/tbEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textOff="@string/registro_offEmail"
+        android:textOn="@string/registro_onEmail"
+        android:text="" />
+
+    <Switch
+        android:id="@+id/swVendendor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/etiquetas"
+        android:textColor="@color/etiqueta"
+        android:text="@string/registro_vendedor" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvAliasCBU"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/etiquetas"
+            android:textColor="@color/etiqueta"
+            android:text="@string/registro_ctaAlias"
+            android:visibility="gone"/>
+
+        <EditText
+            android:id="@+id/etAliasCBU"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text=""
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tvCBU"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/etiquetas"
+            android:textColor="@color/etiqueta"
+            android:text="@string/registro_ctaCBU"
+            android:visibility="gone"/>
+
+        <EditText
+            android:id="@+id/etCBU"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text=""
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/cbTerminosCondiciones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/registro_terminosCondiciones" />
+
+        <Button
+            android:id="@+id/btnRegistrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="registrar"
+            android:text="@string/registro_registrar"
+            android:enabled="false"/>
+    </LinearLayout>
+</ScrollView>

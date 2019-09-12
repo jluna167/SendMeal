@@ -2,5 +2,8 @@
 <resources>
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorAccent">#ABB528CC</color>
+    <color name="titulo">#B528CC</color>
+    <color name="etiqueta">#000000</color>
+    <color name="text">#5C000000</color>
 </resources>
