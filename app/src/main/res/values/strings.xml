@@ -22,5 +22,8 @@
     <string name="registro_ctaCBU">CBU</string>
     <string name="registro_terminosCondiciones">Acepta terminos y condiciones</string>
     <string name="registro_registrar">Registrar</string>
+    <string name="menu_opcion1">Registrarme</string>
+    <string name="menu_opcion2">Crear Item</string>
+    <string name="menu_opcion3">Lista de items</string>
 </resources>
 

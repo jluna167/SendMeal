@@ -1,12 +1,15 @@
 package frsf.isi.lunaojeda.dam.sendmeal;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.graphics.MaskFilter;
 import android.icu.text.SimpleDateFormat;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -42,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
     private CheckBox cbTerminosCondiciones;
     private Button btnRegistrar;
 
+    private Toolbar toolbarBack;
+
     private int credito = 0;
 
     Usuario usuario = new Usuario();
@@ -52,6 +57,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        toolbarBack = findViewById(R.id.toolbarBack);
+        setSupportActionBar(toolbarBack);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         etNombre = (EditText) findViewById(R.id.etNombre);
         etClave = (EditText) findViewById(R.id.etClave);
@@ -195,8 +205,19 @@ public class MainActivity extends AppCompatActivity {
                 registrar(view);
             }
         });
+
+
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            // Respond to the action bar's Up/Home button
+            case android.R.id.home: onBackPressed();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
     public void registrar(View v) {
         try {
